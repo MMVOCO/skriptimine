@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Kusime kasutajalt ainepunktide arvu
+echo -n "Sisesta ainepunktide arv: "
+read ainepunktid
+
+# Kusime kasutajalt nadalate arvu
+echo -n "Sisesta nadalate arv: "
+read nadalad
+
+# Arvutame eeldatava ajakulu (tunnid)
+ajakulu=$(echo "scale=2; ($ainepunktid * 26) / $nadalad" | bc)
+
+# Umardame ulespoole
+umardatud=$(echo "($ajakulu + 0.9)/1" | bc)
+
+# Valjasta tulemus
+echo "Uhe nadala eeldatav ajakulu on: $umardatud tundi"
+
