@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Kusib kasutajalt grupi reisijate arvu ja busside kohtade arvu
+echo -n "Sisesta grupi reisijate arv: "
+read reisijad
+echo -n "Sisesta bussi kohtade arv: "
+read kohad
+
+# Arvuta taidetud busside arv ja jaanud reisijad
+taidetud_bussid=$((reisijad / kohad))
+jaanud_reisijad=$((reisijad % kohad))
+
+# Valjasta tulemused
+echo "Taidetud busse: $taidetud_bussid"
+echo "Maha jaanud reisijad: $jaanud_reisijad"
