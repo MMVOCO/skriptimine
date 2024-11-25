@@ -1,0 +1,12 @@
+#!/bin/bash
+# Skript tervitamiseks kasutajat
+
+# Väljasta "Tere, " ilma reavahetuseta
+echo -n "Tere, "
+
+# Tekita kasutaja nimi ja väljasta see ilma reavahetuseta
+echo -n $(whoami)
+
+# Väljasta "!" reavahetusega
+echo "!"
+
